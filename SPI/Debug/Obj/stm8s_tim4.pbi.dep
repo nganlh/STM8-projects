@@ -1,0 +1,23 @@
+stm8s_tim4.pbi: \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\src\stm8s_tim4.c \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_tim4.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc/stm8s.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\stm8s_conf.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_adc1.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_awu.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_beep.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_clk.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_exti.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_flash.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_gpio.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_i2c.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_itc.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_iwdg.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_rst.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_spi.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_tim1.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_tim2.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_uart1.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_wwdg.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h

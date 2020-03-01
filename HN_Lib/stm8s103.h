@@ -10,6 +10,9 @@ void CLK_CONFIG_16MHZ_HSE(void);
 void Delay_Using_Timer4_Init(void);
 void Delay_ISR(void);
 void Delay_ms(uint32_t time);
+void spi_master_initialize(SPI_BaudRatePrescaler_TypeDef SPI_BaudRatePrescaler_X,
+                           GPIO_TypeDef* CS_PORT,
+                           GPIO_Pin_TypeDef CS_PIN);
 
 //uint32_t milisec();
 

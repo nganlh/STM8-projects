@@ -38,3 +38,29 @@ void Delay_ms(uint32_t time)
   time_keeper = time;
   while(time_keeper);
 }
+
+void spi_master_initialize(SPI_BaudRatePrescaler_TypeDef SPI_BaudRatePrescaler_X,
+                           GPIO_TypeDef* CS_PORT,
+                           GPIO_Pin_TypeDef CS_PIN)
+{
+  //Enable SPI clock
+  CLK_PeripheralClockConfig(CLK_PERIPHERAL_SPI, ENABLE);
+  
+  //Set the MOSI, MISO and SCK at high level
+  GPIO_ExternalPullUpConfig(GPIOC, (GPIO_Pin_TypeDef)(GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7), ENABLE);
+  
+  //Initialize SPI mode master 0
+  SPI_Init(SPI_FIRSTBIT_MSB,
+           SPI_BaudRatePrescaler_X,
+           SPI_MODE_MASTER,
+           SPI_CLOCKPOLARITY_LOW,
+           SPI_CLOCKPHASE_1EDGE,
+           SPI_DATADIRECTION_2LINES_FULLDUPLEX,
+           SPI_NSS_SOFT, 0x07);
+  
+  //SD_SPI Enable
+  SPI_Cmd(ENABLE);
+  
+  //Set ChipSelect Pin in Output push-pull high level
+  GPIO_Init(CS_PORT, CS_PIN, GPIO_MODE_OUT_PP_HIGH_FAST);
+}

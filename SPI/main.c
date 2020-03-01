@@ -28,16 +28,27 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
+#include "stm8s103.h"
+#include "stm8s_spi.h"
+#include "stm8s_clk.h"
 
 /* Private defines -----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
+uint8_t adc_send_data[] = {0x06, 0x00, 0x00};
+uint8_t adc_receive_data[3];
+volatile uint16_t adc_value;
+volatile float voltage = 0;
 
 void main(void)
 {
+  Delay_Using_Timer4_Init();
+  spi_master_initialize(SPI_BAUDRATEPRESCALER_128, GPIOC, GPIO_PIN_3);
+  
   /* Infinite loop */
   while (1)
   {
+    
   }
   
 }
