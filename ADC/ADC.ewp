@@ -257,8 +257,8 @@
                 <option>
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$\User</state>
+                    <state>$PROJ_DIR$\..\HN_Lib</state>
                     <state>$PROJ_DIR$\Libraries\inc</state>
-                    <state>$PROJ_DIR$\..\..\HN_Lib</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1640,10 +1640,10 @@
     <group>
         <name>Lib</name>
         <file>
-            <name>$PROJ_DIR$\..\..\HN_Lib\stm8s103.c</name>
+            <name>$PROJ_DIR$\..\HN_Lib\stm8s103.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\HN_Lib\stm8s103.h</name>
+            <name>$PROJ_DIR$\..\HN_Lib\stm8s103.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\Libraries\src\stm8s_adc1.c</name>

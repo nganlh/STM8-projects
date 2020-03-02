@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\HN DATA\ST\Projects\ADC\settings\ADC.Debug.general.xcl" --backend -f "D:\HN DATA\ST\Projects\ADC\settings\ADC.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Tai lieu dien tu\Projects\STM8-projects\ADC\settings\ADC.Debug.general.xcl" --backend -f "D:\Tai lieu dien tu\Projects\STM8-projects\ADC\settings\ADC.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\HN DATA\ST\Projects\ADC\settings\ADC.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\HN DATA\ST\Projects\ADC\settings\ADC.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Tai lieu dien tu\Projects\STM8-projects\ADC\settings\ADC.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\Tai lieu dien tu\Projects\STM8-projects\ADC\settings\ADC.Debug.driver.xcl" 
 }

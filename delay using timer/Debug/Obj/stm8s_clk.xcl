@@ -1,30 +1,30 @@
-"D:\HN DATA\ST\Projects\delay using timer\Libraries\src\stm8s_clk.c"
+"D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\Libraries\src\stm8s_clk.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-D:\HN DATA\ST\Projects\delay using timer\Debug\Obj\stm8s_clk.pbi.dep
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\Debug\Obj\stm8s_clk.pbi.dep
 -o
 stm8s_clk.pbi
 -I
-D:\HN DATA\ST\Projects\delay using timer\Libraries\src
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\Libraries\src
 -I
-D:\HN DATA\ST\Projects\delay using timer\User
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\User
 -I
-D:\HN DATA\ST\Projects\delay using timer\Libraries\inc
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\Libraries\inc
 -I
-D:\HN DATA\ST\Projects\delay using timer\..\..\HN_Lib
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\..\..\HN_Lib
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc\c
 -I
-D:\HN DATA\ST\Projects\delay using timer\User
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\User
 -I
-D:\HN DATA\ST\Projects\delay using timer\Libraries\inc
+D:\Tai lieu dien tu\Projects\STM8-projects\delay using timer\Libraries\inc
 -I
-D:\HN DATA\ST\HN_Lib
+D:\Tai lieu dien tu\Projects\HN_Lib
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

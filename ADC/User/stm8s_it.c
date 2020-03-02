@@ -29,6 +29,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_it.h"
+#include "stm8s103.h"
 
 
 /** @addtogroup Template_Project
@@ -475,7 +476,7 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
        it is recommended to set a breakpoint on the following instruction.
     */
    adc_value = ADC1_GetConversionValue();
-   ADC1_ClearITPendingBit();
+   ADC1_ClearITPendingBit(ADC1_IT_AWS4);
  }
 #endif /* (STM8S208) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
 
@@ -502,6 +503,7 @@ INTERRUPT_HANDLER(TIM6_UPD_OVF_TRG_IRQHandler, 23)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+   Delay_ISR();
  }
 #endif /* (STM8S903) || (STM8AF622x)*/
 

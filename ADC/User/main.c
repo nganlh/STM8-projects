@@ -4,11 +4,14 @@
 #include "stm8s_it.h"
 
 volatile uint16_t adc_value = 0;
-uint32_t delay_time = 1000;
+uint32_t delay_time = 500;
 
 void main(void)
 {
   //Clock default = 2MHz
+
+  //TIM4 config for delay 
+  Delay_Using_Timer4_Init();
  
   /* GPIO configuration -----------------------------------------*/
   GPIO_Init(GPIOB, GPIO_PIN_5, GPIO_MODE_OUT_PP_HIGH_FAST);  //LED PIN
@@ -21,18 +24,21 @@ void main(void)
   
   //Init ADC1 Module
   ADC1_Init(ADC1_CONVERSIONMODE_CONTINUOUS,
-            ADC1_CHANNEL_3,
-            ADC1_PRESSEL_FCPU_D18,
+            ADC1_CHANNEL_4,
+            ADC1_PRESSEL_FCPU_D2,
             ADC1_EXTTRIG_TIM, DISABLE,
-            ADC1_ALIGN_RIGH,
-            ADC1_SCHMITTTRIG_CHANNEL3,
+            ADC1_ALIGN_RIGHT,
+            ADC1_SCHMITTTRIG_CHANNEL4,
             DISABLE);
   
   //Enable ADC1 End of conversion interrupt
-  ADC1_ITConfig(ENABLE);
+  ADC1_ITConfig(ADC1_IT_EOCIE, ENABLE);
   
   //Enable Global Interrupt
   enableInterrupts();
+  
+  //Start Conversion
+  ADC1_StartConversion();
   
   while (1)
   {

@@ -20,16 +20,15 @@ rule browsedata
 
 
 #Build steps
-build stm8s103.pbi : index stm8s103.xcl
 build stm8s_clk.pbi : index stm8s_clk.xcl
 build stm8s_gpio.pbi : index stm8s_gpio.xcl
 build stm8s_tim2.pbi : index stm8s_tim2.xcl
 build stm8s_tim4.pbi : index stm8s_tim4.xcl
 build main.pbi : index main.xcl
 build stm8s_it.pbi : index stm8s_it.xcl
-build delay_part0.pbi : link stm8s103.pbi stm8s_clk.pbi stm8s_gpio.pbi
-build delay_part1.pbi : link stm8s_tim2.pbi stm8s_tim4.pbi main.pbi
-build delay_part2.pbi : link stm8s_it.pbi
+build delay_part0.pbi : link stm8s_clk.pbi stm8s_gpio.pbi
+build delay_part1.pbi : link stm8s_tim2.pbi stm8s_tim4.pbi
+build delay_part2.pbi : link main.pbi stm8s_it.pbi
 build delay.pbd : link delay_part0.pbi delay_part1.pbi delay_part2.pbi
 build delay.pbw : browsedata delay.pbd
 
