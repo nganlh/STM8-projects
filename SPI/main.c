@@ -1,5 +1,5 @@
 /**
-  ******************************************************************************
+  *******************************************************************************
   * @file    Project/main.c 
   * @author  MCD Application Team
   * @version V2.3.0
@@ -29,8 +29,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
 #include "stm8s103.h"
-#include "stm8s_spi.h"
-#include "stm8s_clk.h"
 
 /* Private defines -----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
@@ -45,10 +43,23 @@ void main(void)
   Delay_Using_Timer4_Init();
   spi_master_initialize(SPI_BAUDRATEPRESCALER_128, GPIOC, GPIO_PIN_3);
   
+  uint8_t data = 1;
+  
   /* Infinite loop */
   while (1)
   {
+    /*
+    spi_master_transmit_receive(GPIOC, GPIO_PIN_3, adc_send_data, adc_receive_data, 3);
+    adc_value = ((adc_receive_data[1]&0x0f)<<8)|(adc_receive_data[2]);
+    voltage = (adc_value/4096.0)*4.096;
+    */
+    GPIO_WriteLow(GPIOC, GPIO_PIN_3);
+    SPI_SendData(~data);
+    GPIO_WriteHigh(GPIOC, GPIO_PIN_3);
     
+    data =data <<1;
+    if(data ==0) data =1;
+    Delay_ms(100);
   }
   
 }

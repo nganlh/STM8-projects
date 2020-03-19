@@ -29,6 +29,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_it.h"
+#include "stm8s103.h"
 
 /** @addtogroup Template_Project
   * @{
@@ -489,6 +490,7 @@ INTERRUPT_HANDLER(TIM6_UPD_OVF_TRG_IRQHandler, 23)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+   Delay_ISR();
  }
 #endif /* (STM8S903) || (STM8AF622x)*/
 

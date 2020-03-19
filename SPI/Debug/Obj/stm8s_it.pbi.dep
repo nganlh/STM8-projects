@@ -20,4 +20,5 @@ stm8s_it.pbi: D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\stm8s_it.c \
   D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_tim4.h \
   D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_uart1.h \
   D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\Libraries\inc\stm8s_wwdg.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
+  D:\Tai\ lieu\ dien\ tu\Projects\STM8-projects\SPI\..\HN_Lib\stm8s103.h
