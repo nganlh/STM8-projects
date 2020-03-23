@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     02/Mar/2020  16:14:44
+# IAR ELF Linker V3.11.1.207 for STM8                     02/Mar/2020  16:21:58
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        D:\Tai lieu dien tu\Projects\STM8-projects\ADC\Debug\List\ADC.map
 #    Command line =  
-#        -f C:\Users\HuuNgan\AppData\Local\Temp\EW8768.tmp ("D:\Tai lieu dien
+#        -f C:\Users\HuuNgan\AppData\Local\Temp\EW25A9.tmp ("D:\Tai lieu dien
 #        tu\Projects\STM8-projects\ADC\Debug\Obj\main.o" "D:\Tai lieu dien
 #        tu\Projects\STM8-projects\ADC\Debug\Obj\stm8s103.o" "D:\Tai lieu dien
 #        tu\Projects\STM8-projects\ADC\Debug\Obj\stm8s_adc1.o" "D:\Tai lieu

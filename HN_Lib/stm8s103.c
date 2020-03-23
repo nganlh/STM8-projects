@@ -64,3 +64,39 @@ void spi_master_initialize(SPI_BaudRatePrescaler_TypeDef SPI_BaudRatePrescaler_X
   //Set ChipSelect Pin in Output push-pull high level
   GPIO_Init(CS_PORT, CS_PIN, GPIO_MODE_OUT_PP_HIGH_FAST);
 }
+
+void spi_master_transmit_receive(GPIO_TypeDef* CS_PORT,
+                                 GPIO_Pin_TypeDef CS_PIN,
+                                 uint8_t* send_data,
+                                 uint8_t* receive_data,
+                                 uint16_t length)
+{
+  //Wait until the transmit buffer is empty
+  while(!SPI_GetFlagStatus(SPI_FLAG_TXE));
+  
+  //Empty receive buffer
+  if(SPI_GetFlagStatus(SPI_FLAG_RXNE))
+  {
+    uint8_t temp_data=SPI_ReceiveData();
+  }
+  
+  //Enable communication
+  GPIO_WriteLow(CS_PORT, CS_PIN);
+  
+  for(uint16_t i=0; i<length; i++)
+  {
+    SPI_SendData(*(send_data+i));
+    if(receive_data != 0)
+    {
+      while(!SPI_GetFlagStatus(SPI_FLAG_RXNE));
+      *(receive_data+i) = SPI_ReceiveData();
+    }
+    else
+    {
+      while(!SPI_GetFlagStatus(SPI_FLAG_TXE));
+    }
+  }
+  
+  //Disable communication
+  GPIO_WriteHigh(CS_PORT, CS_PIN);
+}

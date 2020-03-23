@@ -14,7 +14,12 @@ void spi_master_initialize(SPI_BaudRatePrescaler_TypeDef SPI_BaudRatePrescaler_X
                            GPIO_TypeDef* CS_PORT,
                            GPIO_Pin_TypeDef CS_PIN);
 
-//uint32_t milisec();
+void spi_master_transmit_receive(GPIO_TypeDef* CS_PORT,
+                                 GPIO_Pin_TypeDef CS_PIN,
+                                 uint8_t* send_data,
+                                 uint8_t* receive_data,
+                                 uint16_t length);
+
 
 
 #endif
